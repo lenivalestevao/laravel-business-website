@@ -1,0 +1,52 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "lenivalestevao/laravel-business-website",
+    "type": "project",
+    "description": "Free Laravel 13 business website template: Blade components, home, about, services, pricing, blog and a contact form. No Node build step.",
+    "keywords": ["laravel", "blade", "website", "template", "landing-page", "business"],
+    "license": "MIT",
+    "require": {
+        "php": "^8.3",
+        "laravel/framework": "^13.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "^1.6",
+        "nunomaduro/collision": "^8.6",
+        "phpunit/phpunit": "^12.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "pre-autoload-dump": [
+            "@php bootstrap/prepare.php"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "test": [
+            "@php artisan config:clear --ansi",
+            "@php artisan test"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

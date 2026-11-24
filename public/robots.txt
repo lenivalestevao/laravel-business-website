@@ -1,0 +1,5 @@
+User-agent: *
+Disallow:
+
+# Replace with your real domain before launch
+Sitemap: http://localhost:8000/sitemap.xml
