@@ -1,0 +1,13 @@
+/vendor
+/.env
+/bootstrap/cache/*
+!/bootstrap/cache/.gitignore
+/storage/*.key
+/storage/logs
+/storage/framework
+/storage/app/private
+.phpunit.result.cache
+.phpunit.cache
+.idea
+.vscode
+.DS_Store
